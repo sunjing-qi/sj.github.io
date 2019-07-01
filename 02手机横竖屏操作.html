@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			.one {
+				width: 200px;
+				height: 500px;
+				font-size: 100px;
+				/* text-align: center; */
+				color: white;
+				border-radius: 10px;
+				background: #008000;
+				margin: 10px auto;
+			}
+
+			.two {
+				width: 500px;
+				height: 200px;
+				font-size: 100px;
+				/* text-align: center; */
+				color: white;
+				border-radius: 50%;
+				background: blueviolet;
+				margin: 10px auto;
+			}
+
+			#p1 {
+				font-size: 30px;
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+		屏幕：<p id="p1">竖屏</p>
+		角度：<p id="p2"></p>
+		<div class="one">
+			one
+		</div>
+	</body>
+	<script type="text/javascript">
+		var oneDiv = document.getElementsByClassName("one")[0];
+		var p1 = document.getElementById("p1");
+		var p2 = document.getElementById("p2");
+		// 屏幕旋转事件 触发时机:只要手机发生方向上的改变,就会触发
+		// 该事件需硬件支持,首先需要打开手机的横竖屏状态,其次,手机中自带陀螺仪
+		window.onorientationchange = function() {
+			// 获取屏幕旋转方向--角度
+			p2.innerHTML = window.orientation;
+			switch (window.orientation) {
+				case 0:
+					{
+						p1.innerHTML = "竖屏";
+						p2.innerHTML = window.orientation;
+						oneDiv.className="one";
+						break;
+					}
+				case 90:
+					{
+						p1.innerHTML = "左横屏";
+						p2.innerHTML = window.orientation;
+						oneDiv.className="two";
+						break;
+					}
+				case -90:
+					{
+						p1.innerHTML = "右横屏";
+						p2.innerHTML = window.orientation;
+						oneDiv.className="two";
+						break;
+					}
+				default:
+					break;
+			}
+		}
+	</script>
+</html>
