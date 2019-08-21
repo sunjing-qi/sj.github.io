@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			#box {
+				width: 800px;
+				/* height: 400px; */
+				margin: 100px auto;
+				border: 1px solid red;
+				overflow: hidden;
+			}
+
+			.little {
+				width: 200px;
+				height: 100px;
+				text-align: center;
+				font-size: 20px;
+				line-height: 100px;
+				float: left;
+				cursor: pointer;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+
+		</div>
+		<script type="text/javascript">
+			var box = document.getElementById("box");
+
+			function randomNumber(a = 1, b = 10) {
+				var max = Math.max(a, b);
+				var min = Math.min(a, b);
+				if (isNaN(max)) throw "参数不规范!";
+				return Math.floor(Math.random() * (max - min + 1) + min);
+			}
+			for (var i = 0; i < 16; i++) {
+				var cell = document.createElement("div");
+				cell.className = "little";
+				box.appendChild(cell);
+			}
+			// 生成两两相同的随机数
+			var arr = document.getElementsByClassName("little");
+			console.log(arr);
+			var numbers1 = [];
+			while (true) {
+				var n = randomNumber(0, 15);
+				var value = numbers1.indexOf(n);
+				if (value == -1) numbers1.push(n);
+				if (numbers1.length == 16)
+					break;
+			}
+			console.log(numbers1);
+			for (var j = 0; j < arr.length; j += 2) {
+				var value = randomNumber(1, 100);
+				var r = randomNumber(0, 255);
+				var g = randomNumber(0, 255);
+				var b = randomNumber(0, 255);
+				arr[numbers1[j]].style.background = "rgb(" + r + "," + g + "," + b + ")";
+				arr[numbers1[j + 1]].style.background = "rgb(" + r + "," + g + "," + b + ")";
+				// arr[numbers1[j]].style.color = "rgb(" + b + "," + r + "," + g + ")";
+				// arr[numbers1[j+1]].style.color = "rgb(" + b + "," + r + "," + g + ")";
+				arr[numbers1[j]].innerHTML = value;
+				arr[numbers1[j + 1]].innerHTML = value;
+			}
+			// 选中相同的两个消失
+			var num1 = 0,
+				num2 = 0;
+
+			for (var ab = 0; ab < arr.length; ab++) {
+				arr[ab].index = ab;
+				arr[ab].onclick = function() {
+					num2 = num1;
+					num1 = this.index;
+					if (num1 != num2) {
+						if (arr[num1].innerHTML == arr[num2].innerHTML) {
+							arr[num1].style.display = "none";
+							arr[num2].style.display = "none";
+						}
+					}
+				}
+			}
+			console.log(arr);
+		</script>
+	</body>
+</html>
