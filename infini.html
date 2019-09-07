@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				padding: 0;
+				margin: 0;
+			}
+
+			a {
+				color: #898989;
+				text-decoration: none;
+			}
+
+			body {
+				background-color: rgb(245,245,245);
+			}
+
+			.navbar a {
+				font-size: 0.9em;
+				font-family: HUM521L;
+				padding-left: 11%;
+			}
+
+			.navbar a:first-child {
+				padding: 0;
+				color: white;
+			}
+
+			.navbar a:hover {
+				color: white;
+				text-decoration: none;
+			}
+
+			#header {
+				width: 100%;
+				background-color: rgba(0, 0, 0, 0.75);
+				height: 75px;
+				padding: 15px 0 10px;
+				text-align: center;
+				position: sticky;
+				top: 0;
+			}
+
+			#des {
+				margin: 0 2%;
+			}
+
+			#des p {
+				font-family: STKaiti, 微软雅黑;
+				font-size: 1.2em;
+				text-indent: 2em;
+				padding: 2% 0;
+				color: rgb(102, 102, 102);
+				border-top: 1px solid rgb(232, 232, 232);
+				border-bottom: 1px solid rgb(232, 232, 232);
+			}
+			.shangjia{
+				margin: 1% 2%;
+				text-align: center;
+			}
+			.shangjia img{
+				width: 6%;
+			}
+			
+			.box{
+				width: 31%;
+				margin: 30px 0 0 2%;
+				float: left;
+				overflow: hidden;
+				text-align: center;
+				background-color: white;
+				border-radius:5%;
+			}
+			.box a{
+				width: 100%;
+				border-radius: 5%;
+			}
+			.box p{
+				font-size: 0.98em;
+				white-space: nowrap;
+			}
+			.hidden{
+				width: 31%;
+				height: 15%;
+				color: white;
+				padding: 5% 0;
+				border-radius: 5%;
+				border-bottom-right-radius: 0;
+				border-bottom-left-radius: 0;
+				background-color: rgba(1,1,1,0.3);
+				position: absolute;
+				display: none;
+			}
+			.hidden p{
+				text-align: center;
+				
+			}
+			.box a:hover .hidden{
+				display: block;
+			}
+			.foot{
+				width: 100%;
+				overflow: hidden;
+				background-color: #E0E0E0;
+				font-size: 0.75em;
+				color: #666666;
+				box-sizing: border-box;
+				padding: 10px 0;
+			}
+			.foot img{
+				width: 5%;
+			}
+			.right{
+				float: left;text-align: left;width: 49%;
+				box-sizing: border-box;
+				padding-left: 1%;
+				border-left: 1px solid #bcbcbc;
+			}
+			.right img{
+				width: 20%;
+			}
+			@media screen and (max-width:630px) {
+				.box p{
+					font-size: 0.8em;
+				}
+			}
+			@media screen and (max-width:320px) {
+				.box{
+					width: 47%;
+				}
+				.hidden{
+					width: 47%;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 头 -->
+		<div id="header">
+			<img src="img/title2.png" width="13%">
+			<div class="navbar" style="width: 80%;margin: auto;">
+				<a href="#">HOME</a>
+				<a href="#">WORK</a>
+				<a href="#">CONTACT</a>
+				<a href="#">JOIN US</a>
+			</div>
+		</div>
+		<!-- 滑来滑去的图 -->
+		<div style="text-align: center;margin: 2% 1%;">
+			<img src="img/58bf8b14867c3.jpg" width="98%">
+		</div>
+		<!-- 公司简介 -->
+		<div id="des">
+			<p>INFINI （映纷创意）是一家独立创新营销公司，致力于创造会流动的美好创意。我们从策略与洞察出发，不断探索营销和创意的多元表达，用创作精神为品牌提供更具生命力的跨媒体整合营销服务。</p>
+		</div>
+		<div class="shangjia">
+			<img src="img/1.jpg">
+			<img src="img/2.jpg">
+			<img src="img/3.jpg">
+			<img src="img/4.jpg">
+			<img src="img/5.jpg">
+			<img src="img/6.jpg">
+			<img src="img/7.jpg">
+			<img src="img/8.jpg">
+			<img src="img/9.jpg">
+			<img src="img/10.jpg">
+			<img src="img/11.jpg">
+			<img src="img/12.jpg">
+			<img src="img/13.jpg">
+			<img src="img/14.jpg">
+		</div>
+		<div class="boxes">
+			<div class="box">
+				<a href="#">
+					<div class="hidden">
+						<p style="font-size: 30px;">抖音</p>
+						<p style="font-family: 宋体;">迪拜跨年灯光秀</p>
+					</div>
+					<img src="img/tiktok.jpg" width="100%">
+				    <p style="padding: 1px 0 3px;">抖音海外版Tik Tok</p>
+				</a>
+			</div>
+			<div class="box">
+				<a href="#">
+					<div class="hidden">
+						<p style="font-size: 30px;">腾讯公益</p>
+						<p style="font-family: 宋体;">数字敦煌</p>
+					</div>
+					<img src="img/敦煌.jpg" width="100%">
+				    <p style="padding: 1px 0 3px;">数字敦煌</p>
+				</a>
+			</div>
+			<div class="box">
+				<a href="#">
+					<div class="hidden">
+						<p style="font-size: 30px;">今日头条</p>
+						<p style="font-family: 宋体;">2017我的家乡头条</p>
+					</div>
+					<img src="img/回家.jpg" width="100%">
+				    <p style="padding: 1px 0 3px;">2017我的家乡头条</p>
+				</a>
+			</div>
+			<div class="box">
+				<a href="#">
+					<div class="hidden">
+						<p style="font-size: 30px;">腾讯</p>
+						<p style="font-family: 宋体;">微众银行</p>
+					</div>
+					<img src="img/webank.jpg" width="100%">
+				    <p style="padding: 1px 0 3px;">微众银行品牌宣传片</p>
+				</a>
+			</div>
+			<div class="box">
+				<a href="#">
+					<div class="hidden">
+						<p style="font-size: 30px;">扇贝</p>
+						<p style="font-family: 宋体;">扇贝雅思课程</p>
+					</div>
+					<img src="img/旅行者.jpg" width="100%">
+				    <p style="padding: 1px 0 3px;">扇贝雅思课程</p>
+				</a>
+			</div>
+			<div class="box">
+				<a href="#">
+					<div class="hidden">
+						<p style="font-size: 30px;">网易新闻</p>
+						<p style="font-family: 宋体;">动画短片《旅行者大意了》</p>
+					</div>
+					<img src="img/58bf8b14867c3.jpg" width="100%">
+				    <p style="padding: 1px 0 3px;">动画短片《旅行者大意了》</p>
+				</a>
+			</div>
+			<div class="box">
+				<a href="#">
+					<div class="hidden">
+						<p style="font-size: 30px;">华为</p>
+						<p style="font-family: 宋体;">华为，为您构筑下一代网络安全</p>
+					</div>
+					<img src="img/华为.jpg" width="100%">
+				    <p style="padding: 1px 0 3px;">华为发布会《为您构筑下一代网络安全》</p>
+				</a>
+			</div>
+			<div class="box">
+				<a href="#">
+					<div class="hidden">
+						<p style="font-size: 30px;">腾讯视频</p>
+						<p style="font-family: 宋体;">《拜托了冰箱》</p>
+					</div>
+					<img src="img/拜托了.jpg" width="100%">
+				    <p style="padding: 1px 0 3px;">《拜托了冰箱》栏目包装</p>
+				</a>
+			</div>
+			<div class="box">
+				<a href="#">
+					<div class="hidden">
+						<p style="font-size: 30px;">今日头条</p>
+						<p style="font-family: 宋体;">吴亦凡--器官的纷争</p>
+					</div>
+					<img src="img/吴亦凡.jpg" width="100%">
+				    <p style="padding: 1px 0 3px;">吴亦凡--器官的纷争</p>
+				</a>
+			</div>
+		</div>
+		<div class="foot">
+			<div style="text-align: right;width: 50%;float: left;box-sizing: border-box;padding-right: 1%;">
+				<img src="img/contact1.jpg" >
+				<img src="img/contact2.jpg" >
+				<img src="img/contact3.jpg" >
+			</div>
+			<div class="right">
+				<img src="img/footer_logo.jpg" >
+				<p>INFINI | 映纷创意</p>
+				<p>北京市朝阳区常营</p>
+				<p>TEL : 010-85394331</p>
+				<p>QQ : 7585917</p>
+				<p>Email : infinistudio@foxmail.com</p>
+				<p>weibo : @InfiniStudio</p>
+			</div>
+		</div>
+	</body>
+</html>
